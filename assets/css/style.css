@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+.tb {
+    background-color: darkgray;
+    color: skyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tb h1 {
+    background-color: skyblue;
+    color: darkgrey;
+    margin: .3em .3em .3em 0;
+    padding: .1em .1em .1em 10%;
+    font-size: 4em;
+    line-height: 1;
+    
+}
+
+.tb nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-top: 2em;
+
+
+}
+
+.tb nav a {
+    padding: 1em;
+    margin: .3em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: skyblue;
+    position: relative;
+    z-index: 0;
+    transition: color .5s ease-in-out;
+}
+
+.tb nav a::before {
+    content: '';
+    background-color: skyblue;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: .2em;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+}
+
+.tb nav a:hover::before {
+    bottom: 0;
+    height: 100%;
+}
+
+.tb nav a:hover {
+    color: darkgrey;
+}
+
+
+.bg {
+    background-image: url("../images/tech-stock.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 20em;
+    display: flex;
+    padding: 1em 2em;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+}
+
+.bg h2 {
+    color: darkgrey;
+    background-color: skyblue;
+    margin: 0;
+    padding: .1em .1em;
+    font-size: 2em;
+    display: inline;
+}
+
+.buffer {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.am {
+    margin: .2em 0;
+    padding: .1em 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.am h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    color: slategray;
+    font-size: 4.2em;
+    padding-right: .1em;
+    border-right: .1em solid slategray;
+    line-height: 1;
+}
+
+.am p {
+    flex: 0 0 77%;
+}
+
+.wk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wk h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    color: skyblue;
+    font-size: 4.2em;
+    padding-right: .1em;
+    border-right: .1em solid slategray;
+    line-height: 1;
+}
+
+.box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 77%;
+}
+
+.box2 {
+    border: .4em solid skyblue;
+    background-color: darkgray;
+    color: slategray;
+    min-height: 10em;
+    max-height: 10em;
+    flex-basis: 48%;
+    display: flex;
+    /* padding: 0 0 .1em 0; */
+    margin: .2em;
+    align-items: flex-end;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    transition: all .5s;
+    font-size: 1em;
+}
+
+.box2:first-child {
+    min-height: 20em;
+    flex-basis: 97%;
+}
+
+.box2:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.box2 div {
+    background-color: skyblue;
+    padding: .1em;
+    
+}
+
+
+.cc {
+    color: slategray;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: auto;
+    align-content: center;
+    margin-top: 3em;
+}
+
+.cc address a {
+    padding: .2em;
+    margin: 2em;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: skyblue;
+    position: relative;
+    z-index: 0;
+    transition: color .5s ease-in-out;
+}
+
+.cc address a::before {
+    content: '';
+    background-color: skyblue;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: .2em;
+    z-index: -1;
+    transition: all .5s ease-in-out;
+}
+
+.cc address a:hover {
+    color: slategray;
+}
+
+.cc address a:hover::before {
+    bottom: 0;
+    height: 100%;
+}
+
+.t1 {
+    background-image: url("../images/chip1.jpg");
+}
+
+@media screen and (max-width: 768px) {
+    .box2 {
+        flex-basis: 97%
+    }
+
+    .tb {
+        flex-direction: column;
+    }
+}
